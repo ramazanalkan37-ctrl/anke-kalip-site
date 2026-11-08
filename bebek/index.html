@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oğlumuz İçin Eksiksiz Hazırlık & İhtiyaç Paneli</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Plus Jakarta Sans & Fraunces (Warm Boho Aesthetic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Fraunces"', 'serif'],
+          },
+          colors: {
+            boho: {
+              bg: '#FAF6F0',
+              card: '#FFFFFF',
+              sand: '#F2EAE0',
+              border: '#E5DACB',
+              terracotta: '#C86D51',
+              terracottaDark: '#A8553B',
+              amber: '#D99B52',
+              sage: '#6B8E78',
+              sageLight: '#EBF2ED',
+              brown: '#3D312A',
+              muted: '#7A6B61'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FAF6F0;
+      color: #3D312A;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F2EAE0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D0C0AE;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #B8A48E;
+    }
+    .checked-card {
+      background-color: #F4F8F5 !important;
+      border-color: #BBD0C2 !important;
+    }
+    .checked-card .item-title {
+      text-decoration: line-through;
+      color: #6B8E78;
+    }
+    .shop-btn {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .shop-ebebek { background: #EBF5FF; color: #0066CC; border: 1px solid #B8DCFF; }
+    .shop-ebebek:hover { background: #0066CC; color: #FFF; }
+    .shop-trendyol { background: #FFF2E8; color: #F27A1A; border: 1px solid #FFD4B3; }
+    .shop-trendyol:hover { background: #F27A1A; color: #FFF; }
+    .shop-hb { background: #FFF0EB; color: #FF6000; border: 1px solid #FFCCB3; }
+    .shop-hb:hover { background: #FF6000; color: #FFF; }
+    .shop-amazon { background: #F2F4F8; color: #232F3E; border: 1px solid #D5DBDB; }
+    .shop-amazon:hover { background: #232F3E; color: #FFF; }
+    @media print {
+      .no-print { display: none !important; }
+      body { background-color: #FFFFFF; }
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-16 selection:bg-boho-terracotta selection:text-white">
+
+  <!-- ÜST BAŞLIK VE VERİTABANI DURUMU -->
+  <header class="bg-gradient-to-r from-[#F2EAE0] via-[#FAF6F0] to-[#F2EAE0] border-b border-boho-border sticky top-0 z-30 backdrop-blur-md bg-opacity-95">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+        
+        <!-- Logo & Başlık (Boho Aslan Temalı) -->
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-2xl bg-boho-amber/20 border border-boho-amber/40 flex items-center justify-center shadow-sm shrink-0">
+            <svg class="w-8 h-8 text-boho-terracotta" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="24" fill="#D99B52" fill-opacity="0.35"/>
+              <path d="M32 8C35 8 38 11 41 10C44 9 48 12 49 15C50 18 54 20 54 23C54 26 56 30 55 33C54 36 56 40 54 43C52 46 52 50 49 51C46 52 44 55 41 55C38 55 35 57 32 56C29 57 26 55 23 55C20 55 18 52 15 51C12 50 12 46 10 43C8 40 10 36 9 33C8 30 10 26 10 23C10 20 14 18 15 15C16 12 20 9 23 10C26 11 29 8 32 8Z" stroke="#C86D51" stroke-width="2.5" fill="#E8B87D"/>
+              <circle cx="32" cy="33" r="15" fill="#FAF6F0" stroke="#3D312A" stroke-width="2"/>
+              <circle cx="26.5" cy="30.5" r="2" fill="#3D312A"/>
+              <circle cx="37.5" cy="30.5" r="2" fill="#3D312A"/>
+              <path d="M30 35.5L32 37.5L34 35.5" stroke="#C86D51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M32 37.5V40.5M32 40.5C30 40.5 28.5 39.5 28.5 39.5M32 40.5C34 40.5 35.5 39.5 35.5 39.5" stroke="#3D312A" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-boho-amber/20 text-boho-terracottaDark">Boho & Natural Hazırlık Rehberi</span>
+              <span id="db-status-badge" class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-boho-sageLight text-boho-sage border border-boho-sage/30">
+                <span class="w-2 h-2 rounded-full bg-boho-sage"></span>
+                <span id="db-status-text">Veritabanı Kayıt Durumu: Kaydedildi</span>
+              </span>
+            </div>
+            <h1 class="font-serif text-xl sm:text-2xl font-bold text-boho-brown mt-0.5">Oğlumuz İçin Eksiksiz Hazırlık & İhtiyaç Paneli</h1>
+          </div>
+        </div>
+
+        <!-- Sekme ve İşlem Butonları -->
+        <div class="flex flex-wrap items-center gap-2 no-print">
+          <button onclick="switchMainTab('checklist')" id="tab-btn-checklist" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 bg-boho-terracotta text-white shadow-sm">
+            <i class="ph-bold ph-check-square-offset text-lg"></i>
+            İhtiyaç Listesi & Linkler
+          </button>
+          <button onclick="switchMainTab('comparisons')" id="tab-btn-comparisons" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 bg-white text-boho-brown border border-boho-border hover:bg-boho-sand">
+            <i class="ph-bold ph-scales text-lg text-boho-terracotta"></i>
+            Karşılaştırma Rehberi (Ana Kucağı & Hava)
+          </button>
+          <div class="h-6 w-px bg-boho-border mx-0.5 hidden sm:block"></div>
+          <button onclick="openAddItemModal()" class="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-boho-sage text-white hover:opacity-95 transition-all flex items-center gap-1.5 shadow-sm">
+            <i class="ph-bold ph-plus"></i>
+            <span>Yeni İhtiyaç Ekle</span>
+          </button>
+          <button onclick="exportData()" class="px-3 py-2 rounded-xl text-xs font-semibold text-boho-brown hover:bg-boho-sand border border-boho-border bg-white transition-all flex items-center gap-1" title="JSON Yedek İndir">
+            <i class="ph-bold ph-download-simple text-base"></i>
+            <span class="hidden xl:inline">Yedek İndir</span>
+          </button>
+          <label class="px-3 py-2 rounded-xl text-xs font-semibold text-boho-brown hover:bg-boho-sand border border-boho-border bg-white transition-all cursor-pointer flex items-center gap-1" title="JSON Yedek Yükle">
+            <i class="ph-bold ph-upload-simple text-base"></i>
+            <span class="hidden xl:inline">Yedek Yükle</span>
+            <input type="file" id="import-json-input" accept=".json" class="hidden" onchange="importData(event)" />
+          </label>
+          <button onclick="openResetModal()" class="p-2 rounded-xl text-red-600 hover:bg-red-50 border border-boho-border bg-white transition-all" title="Varsayılana Sıfırla">
+            <i class="ph-bold ph-arrow-counter-clockwise text-base"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ANA İÇERİK -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+
+    <!-- ==================== SEKME 1: İHTİYAÇ LİSTESİ & CANLI BÜTÇE ==================== -->
+    <div id="view-checklist" class="space-y-6">
+
+      <!-- Özet Metrik Kartları -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="bg-white rounded-2xl p-5 border border-boho-border shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold uppercase tracking-wider text-boho-muted">Genel Tamamlanma</span>
+            <span id="stat-percent-badge" class="text-xs font-bold px-2.5 py-1 rounded-full bg-boho-sageLight text-boho-sage">%0</span>
+          </div>
+          <div class="my-3">
+            <div class="flex items-baseline gap-2">
+              <span id="stat-completed-count" class="text-3xl font-bold font-serif text-boho-brown">0</span>
+              <span class="text-sm text-boho-muted">/ <span id="stat-total-count">0</span> kalem alındı</span>
+            </div>
+          </div>
+          <div class="w-full bg-boho-sand h-2.5 rounded-full overflow-hidden">
+            <div id="stat-progress-bar" class="bg-boho-sage h-full rounded-full transition-all duration-500" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 border border-boho-border shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold uppercase tracking-wider text-boho-muted">İlk Ay Acil / Öncelikli</span>
+            <i class="ph-fill ph-star text-boho-amber text-xl"></i>
+          </div>
+          <div class="my-3">
+            <div class="flex items-baseline gap-2">
+              <span id="stat-urgent-done" class="text-3xl font-bold font-serif text-boho-terracotta">0</span>
+              <span class="text-sm text-boho-muted">/ <span id="stat-urgent-total">0</span> acil ürün hazır</span>
+            </div>
+          </div>
+          <p class="text-xs text-boho-muted">Doğum ve ilk 30 gün için kritik kalemler</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 border border-boho-border shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold uppercase tracking-wider text-boho-muted">Tahmini Toplam Bütçe</span>
+            <i class="ph-duotone ph-calculator text-boho-terracotta text-xl"></i>
+          </div>
+          <div class="my-3">
+            <span id="stat-estimated-budget" class="text-2xl sm:text-3xl font-bold font-serif text-boho-brown">0 ₺</span>
+          </div>
+          <p class="text-xs text-boho-muted">Fiyat kutularından anlık güncelleyebilirsiniz</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 border border-boho-border shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold uppercase tracking-wider text-boho-muted">Alınanlar / Kalan</span>
+            <i class="ph-duotone ph-wallet text-boho-sage text-xl"></i>
+          </div>
+          <div class="my-3">
+            <div class="flex items-baseline justify-between">
+              <div>
+                <span class="text-xs text-boho-muted block">Harcanan (Tikli):</span>
+                <span id="stat-spent-budget" class="text-xl font-bold text-boho-sage">0 ₺</span>
+              </div>
+              <div class="text-right">
+                <span class="text-xs text-boho-muted block">Kalan İhtiyaç:</span>
+                <span id="stat-remaining-budget" class="text-xl font-bold text-boho-terracotta">0 ₺</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-boho-muted">Tik attığınız her ürün otomatik düşülür</p>
+        </div>
+
+      </section>
+
+      <!-- Hızlı İpuçları Kutusu -->
+      <section class="bg-gradient-to-r from-boho-amber/15 via-boho-sand to-boho-sageLight rounded-2xl p-4 border border-boho-amber/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="flex items-start gap-3">
+          <div class="p-2 rounded-xl bg-white text-boho-terracotta shadow-sm shrink-0 mt-0.5">
+            <i class="ph-fill ph-lightbulb-filament text-xl"></i>
+          </div>
+          <div class="text-xs sm:text-sm text-boho-brown leading-relaxed">
+            <strong>Altın Kural İpuçları:</strong> Kıyafetlerde <em>Yenidoğan (50 cm)</em> yerine ağırlığı <strong>0-3 Ay (56-62 cm)</strong> kruvaze zıbın ve çift yönlü fermuarlı tulumlara verin. Bez ve kozmetikte başlangıçta 1-2 paket alın. Oto koltuğunda bebeği kışlık astronot tulumla bağlamayın; kemeri bağlayıp üstüne battaniye örtün.
+          </div>
+        </div>
+        <button onclick="switchMainTab('comparisons')" class="shrink-0 px-3.5 py-2 rounded-xl bg-white text-boho-terracottaDark font-semibold text-xs border border-boho-amber/40 hover:bg-boho-amber/10 transition-all no-print">
+          Ana Kucağı & Hava Karşılaştırmasını Gör →
+        </button>
+      </section>
+
+      <!-- Arama ve Kategori Filtreleri -->
+      <section class="bg-white rounded-2xl p-4 border border-boho-border shadow-sm space-y-4 no-print">
+        <div class="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
+          
+          <div class="relative flex-1">
+            <i class="ph-bold ph-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-boho-muted"></i>
+            <input 
+              type="text" 
+              id="search-input" 
+              oninput="renderChecklist()"
+              placeholder="Ürün, marka veya not ara (örn: Joie Dreamer, HEPA, Haakaa, zıbın, TOG, ADAC)..." 
+              class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-boho-bg border border-boho-border text-sm focus:outline-none focus:border-boho-terracotta transition-all"
+            />
+          </div>
+
+          <div class="flex flex-wrap items-center gap-1.5 bg-boho-bg p-1.5 rounded-xl border border-boho-border">
+            <button onclick="setStatusFilter('all')" id="filter-status-all" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition-all bg-boho-brown text-white">
+              Tümü
+            </button>
+            <button onclick="setStatusFilter('pending')" id="filter-status-pending" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-boho-muted hover:text-boho-brown">
+              Alınacaklar
+            </button>
+            <button onclick="setStatusFilter('completed')" id="filter-status-completed" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-boho-muted hover:text-boho-brown">
+              Alınanlar
+            </button>
+            <button onclick="setStatusFilter('urgent')" id="filter-status-urgent" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-boho-muted hover:text-boho-brown flex items-center gap-1">
+              <i class="ph-fill ph-star text-boho-amber"></i> İlk Ay Acil
+            </button>
+            <button onclick="setStatusFilter('later')" id="filter-status-later" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-boho-muted hover:text-boho-brown">
+              5-6. Ay Sonrası
+            </button>
+          </div>
+
+        </div>
+
+        <div id="category-pills-container" class="flex items-center gap-2 overflow-x-auto pb-1"></div>
+      </section>
+
+      <!-- İhtiyaç Listesi Kategorileri -->
+      <div id="checklist-container" class="space-y-6"></div>
+
+    </div>
+
+    <!-- ==================== SEKME 2: KARŞILAŞTIRMA REHBERİ ==================== -->
+    <div id="view-comparisons" class="hidden space-y-8">
+
+      <!-- Tablo 1: Ana Kucağı & Salıncak Karşılaştırması -->
+      <section class="bg-white rounded-2xl p-6 border border-boho-border shadow-sm space-y-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-boho-border pb-4">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-boho-terracotta">Karşılaştırma & F/P Analizi #1</span>
+            <h2 class="font-serif text-2xl font-bold text-boho-brown mt-1">Ev Tipi Ana Kucağı (Bouncer) & Salıncak Rehberi</h2>
+            <p class="text-sm text-boho-muted mt-1">Konuştuğumuz 6 modelin mekanizma, kapasite, güncel fiyat ve doğrudan mağaza linkleri:</p>
+          </div>
+          <div class="bg-boho-sageLight border border-boho-sage/30 rounded-xl px-4 py-3 shrink-0">
+            <span class="text-xs font-bold text-boho-sage uppercase block">En Mantıklı Fiyat/Performans Seçimi</span>
+            <span class="text-sm font-bold text-boho-brown">Joie Dreamer (3.999 TL) veya baby plus Cool (1.599 TL)</span>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse min-w-[900px]">
+            <thead>
+              <tr class="bg-boho-bg border-b border-boho-border text-xs font-bold uppercase text-boho-muted">
+                <th class="p-3.5 rounded-tl-xl">Model & Mağaza Linkleri</th>
+                <th class="p-3.5">Fiyat</th>
+                <th class="p-3.5">Çalışma & Sallanma Mekanizması</th>
+                <th class="p-3.5">Ses & Titreşim</th>
+                <th class="p-3.5">Ağırlık & Katlanma</th>
+                <th class="p-3.5 rounded-tr-xl">Kullanıcı Yorumu & Karar Özeti</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-boho-border text-sm">
+              
+              <!-- Joie Dreamer -->
+              <tr class="bg-boho-sageLight/40 hover:bg-boho-sageLight/70 transition-all">
+                <td class="p-4 font-bold text-boho-brown space-y-2">
+                  <div class="flex items-center gap-2">
+                    <span class="px-2 py-0.5 text-[10px] font-bold uppercase bg-boho-sage text-white rounded-md">En İyi F/P</span>
+                    Joie Dreamer Ana Kucağı
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <a href="https://www.e-bebek.com/search?text=Joie%20Dreamer%20Ana%20Kuca%C4%9F%C4%B1" target="_blank" rel="noopener noreferrer" class="shop-btn shop-ebebek">🛒 Ebebek</a>
+                    <a href="https://www.trendyol.com/sr?q=Joie%20Dreamer%20Ana%20Kuca%C4%9F%C4%B1" target="_blank" rel="noopener noreferrer" class="shop-btn shop-trendyol">🟠 Trendyol</a>
+                    <a href="https://www.hepsiburada.com/ara?q=Joie%20Dreamer%20Ana%20Kuca%C4%9F%C4%B1" target="_blank" rel="noopener noreferrer" class="shop-btn shop-hb">📦 Hepsiburada</a>
+                  </div>
+                </td>
+                <td class="p-4 font-bold text-boho-sage whitespace-nowrap">3.999,20 ₺</td>
+                <td class="p-4"><strong>Manuel Yaylanma + Beşik:</strong> Bebeğin hareketiyle yukarı-aşağı yaylanır, alt ayağı açılınca ileri-geri sallanır.</td>
+                <td class="p-4"><span class="text-boho-sage font-semibold">Var (Pilli):</span> 5 ninni, 5 doğa sesi + 2 kademe sakinleştirici titreşim.</td>
+                <td class="p-4"><strong>3.5 kg.</strong> İncecik katlanır, odadan odaya ve seyahate kolayca taşınır (0-13 kg).</td>
+                <td class="p-4 text-xs leading-relaxed">Hem yaylanma hem titreşim/müzik sunar. 12.750 TL vermeden tüm ihtiyacı çözen en dengeli ve rasyonel modeldir.</td>
+              </tr>
+
+              <!-- baby plus Cool -->
+              <tr class="hover:bg-boho-bg/60 transition-all">
+                <td class="p-4 font-bold text-boho-brown space-y-2">
+                  <div>baby plus Cool Ev Tipi Ana Kucağı</div>
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <a href="https://www.e-bebek.com/search?text=baby%20plus%20Cool%20Ev%20Tipi%20Ana%20Kuca%C4%9F%C4%B1" target="_blank" rel="noopener noreferrer" class="shop-btn shop-ebebek">🛒 Ebebek</a>
+                    <a href="https://www.trendyol.com/sr?q=ev%20tipi%20yaylanan%20ana%20kuca%C4%9F%C4%B1" target="_blank" rel="noopener noreferrer" class="shop-btn shop-trendyol">🟠 Trendyol</a>
+                    <a href="https://www.hepsiburada.com/ara?q=baby%20plus%20ana%20kuca%C4%9F%C4%B1" target="_blank" rel="noopener noreferrer" class="shop-btn shop-hb">📦 Hepsiburada</a>
+                  </div>
+                </td>
+                <td class="p-4 font-bold text-boho-brown whitespace-nowrap">1.599,20 ₺</td>
+                <td class="p-4"><strong>Manuel Yaylanma (Bouncer):</strong> BabyBjörn ile birebir aynı şasi tasarımına sahiptir; yukarı-aşağı esner.</td>
+                <td class="p-4 text-boho-muted">Yok (Mekanik)</td>
+                <td class="p-4"><strong>~2.5 kg.</strong> Tamamen düz katlanır, çok hafiftir.</td>
+                <td class="p-4 text-xs leading-relaxed">Yay çeliği BabyBjörn'e göre biraz daha serttir; ilk 2 ay elinizle hafifçe sallamanız gerekir ama <strong>11.150 TL cebinizde kalır</strong>.</td>
+              </tr>
+
+              <!-- Pierre Cardin Plume -->
+              <tr class="hover:bg-boho-bg/60 transition-all">
+                <td class="p-4 font-bold text-boho-brown space-y-2">
+                  <div>Pierre Cardin Plume Ana Kucağı</div>
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <a href="https://www.e-bebek.com/search?text=Pierre%20Cardin%20Plume%20Ana%20Kuca%C4%9F%C4%B1" target="_blank" rel="noopener noreferrer" class="shop-btn shop-ebebek">🛒 Ebebek</a>
+                    <a href="https://www.trendyol.com/sr?q=Pierre%20Cardin%20Plume%20Ana%20Kuca%C4%9F%C4%B1" target="_blank" rel="noopener noreferrer" class="shop-btn shop-trendyol">🟠 Trendyol</a>
+                    <a href="https://www.hepsiburada.com/ara?q=Pierre%20Cardin%20Plume%20Ana%20Kuca%C4%9F%C4%B1" target="_blank" rel="noopener noreferrer" class="shop-btn shop-hb">📦 Hepsiburada</a>
+                  </div>
+                </td>
+                <td class="p-4 font-bold text-boho-brown whitespace-nowrap">2.799,00 ₺</td>
+                <td class="p-4"><strong>Manuel Yaylanma (Bouncer):</strong> Yukarı-aşağı esneyen ergonomik tel şasi.</td>
+                <td class="p-4 text-boho-muted">Yok (Mekanik)</td>
+                <td class="p-4"><strong>~2.6 kg.</strong> İncecik katlanır, yıkanabilir kılıf.</td>
+                <td class="p-4 text-xs leading-relaxed">BabyBjörn'ün şık kumaşlı ve uygun bütçeli muadilidir.</td>
+              </tr>
+
+              <!-- Chicco Rhythm N Sound -->
+              <tr class="hover:bg-boho-bg/60 transition-all">
+                <td class="p-4 font-bold text-boho-brown space-y-2">
+                  <div>Chicco Rhythm N Sound</div>
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <a href="https://www.e-bebek.com/search?text=Chicco%20Rhythm%20N%20Sound" target="_blank" rel="noopener noreferrer" class="shop-btn shop-ebebek">🛒 Ebebek</a>
+                    <a href="https://www.trendyol.com/sr?q=Chicco%20Rhythm%20N%20Sound" target="_blank" rel="noopener noreferrer" class="shop-btn shop-trendyol">🟠 Trendyol</a>
+                    <a href="https://www.hepsiburada.com/ara?q=Chicco%20Rhythm%20N%20Sound" target="_blank" rel="noopener noreferrer" class="shop-btn shop-hb">📦 Hepsiburada</a>
+                  </div>
+                </td>
+                <td class="p-4 font-bold text-boho-brown whitespace-nowrap">5.599,20 ₺</td>
+                <td class="p-4"><strong>Otomatik Sağa-Sola Kayma (Glider):</strong> Elektrikli/pilli tabanıyla yatay sağa-sola kayar. <em>Yukarı-aşağı yaylanmaz!</em></td>
+                <td class="p-4"><span class="text-boho-terracotta font-semibold">Sadece Ses:</span> Doğa sesleri ve ninniler (Titreşim yok).</td>
+                <td class="p-4"><strong>~4 kg.</strong> Yassı katlanır. Maksimum 9 kg (~6 ay) kapasiteli.</td>
+                <td class="p-4 text-xs leading-relaxed">Motoru ultra sessizdir, kucakta pışpışlama hissi verir. Ancak yenidoğan için biraz dik kalabilir (müslinle desteklenir) ve 6. ayda kullanımı biter.</td>
+              </tr>
+
+              <!-- Joie Serina 2'si 1 Arada -->
+              <tr class="hover:bg-boho-bg/60 transition-all">
+                <td class="p-4 font-bold text-boho-brown space-y-2">
+                  <div>Joie Serina 2'si 1 Arada Otomatik</div>
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <a href="https://www.e-bebek.com/search?text=Joie%20Serina" target="_blank" rel="noopener noreferrer" class="shop-btn shop-ebebek">🛒 Ebebek</a>
+                    <a href="https://www.trendyol.com/sr?q=Joie%20Serina%202%27si%201%20Arada" target="_blank" rel="noopener noreferrer" class="shop-btn shop-trendyol">🟠 Trendyol</a>
+                    <a href="https://www.hepsiburada.com/ara?q=Joie%20Serina" target="_blank" rel="noopener noreferrer" class="shop-btn shop-hb">📦 Hepsiburada</a>
+                  </div>
+                </td>
+                <td class="p-4 font-bold text-boho-brown whitespace-nowrap">7.599,20 ₺</td>
+                <td class="p-4"><strong>Otomatik Motorlu Salıncak:</strong> 6 hızda hem ileri-geri hem sağa-sola sallar. Üst koltuğu çıkıp yerde rocker olur.</td>
+                <td class="p-4"><span class="text-boho-sage font-semibold">Tam Donanım:</span> 10 ses, 2 kademe titreşim + gece lambası.</td>
+                <td class="p-4"><strong>~8.6 kg.</strong> Katlanmaz, ağır ve hacimlidir. Salonda sabit yer ister.</td>
+                <td class="p-4 text-xs leading-relaxed">"Elimi sürmeyeyim, kendi sallasın" diyenler için harikadır; ancak odadan odaya taşımak veya bagaja koymak zordur.</td>
+              </tr>
+
+              <!-- BabyBjörn Bliss -->
+              <tr class="hover:bg-boho-bg/60 transition-all">
+                <td class="p-4 font-bold text-boho-brown space-y-2">
+                  <div>BabyBjörn Bliss Ana Kucağı</div>
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <a href="https://www.e-bebek.com/search?text=BabyBjorn%20Bliss" target="_blank" rel="noopener noreferrer" class="shop-btn shop-ebebek">🛒 Ebebek</a>
+                    <a href="https://www.trendyol.com/sr?q=BabyBjorn%20Bliss%20Ana%20Kuca%C4%9F%C4%B1" target="_blank" rel="noopener noreferrer" class="shop-btn shop-trendyol">🟠 Trendyol</a>
+                    <a href="https://www.hepsiburada.com/ara?q=BabyBjorn%20Bliss" target="_blank" rel="noopener noreferrer" class="shop-btn shop-hb">📦 Hepsiburada</a>
+                  </div>
+                </td>
+                <td class="p-4 font-bold text-red-600 whitespace-nowrap">12.749,15 ₺</td>
+                <td class="p-4"><strong>Hassas İsveç Yay Çeliği:</strong> Bebek 3.5 kiloyken bile en ufak nefes/el hareketiyle doğal yaylanır.</td>
+                <td class="p-4 text-boho-muted">Yok (Mekanik)</td>
+                <td class="p-4"><strong>~2.1 kg.</strong> İncecik katlanır. 13 kg'a (2 yaşa) kadar kullanılır.</td>
+                <td class="p-4 text-xs leading-relaxed">Ergonomisi ve 2. el ("çeyrek altın") piyasası çok güçlüdür; ancak sıfırına 12.750 TL vermek yerine Joie Dreamer veya 2. el şasi almak çok daha mantıklıdır.</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Tablo 2: Hava Temizleyici ve Nem Rehberi -->
+      <section class="bg-white rounded-2xl p-6 border border-boho-border shadow-sm space-y-6">
+        <div class="border-b border-boho-border pb-4">
+          <span class="text-xs font-bold uppercase tracking-wider text-boho-terracotta">Karşılaştırma & Bilimsel Gerçekler #2</span>
+          <h2 class="font-serif text-2xl font-bold text-boho-brown mt-1">Hava Temizleyici, Soğuk Buhar ve Nem Rehberi</h2>
+          <p class="text-sm text-boho-muted mt-1">"Hava temizleyici havayı kurutur mu?" şehir efsanesi ve önerilen cihazların doğrudan mağaza linkleri:</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="bg-boho-bg rounded-2xl p-5 border border-boho-border space-y-2.5">
+            <h3 class="font-bold text-base text-boho-brown">1. Hava Temizleyici Odayı Kurutur mu?</h3>
+            <p class="text-xs text-boho-muted leading-relaxed">
+              <strong>Fiziksel Olarak İmkansızdır:</strong> HEPA filtreler <strong>0.3 mikron</strong> katı partikülleri tutar. Su buharı (nem) molekülleri ise <strong>0.0004 mikrondur</strong> (750 kat daha küçük) ve gaz halindedir; filtreden olduğu gibi geçer. Havayı kurutan şey cihaz değil, kışın yanan kalorifer petekleridir.
+            </p>
+          </div>
+
+          <div class="bg-boho-bg rounded-2xl p-5 border border-boho-border space-y-2.5">
+            <h3 class="font-bold text-base text-boho-brown">2. Neden Üst Segment Modeller Nemlendiricili?</h3>
+            <p class="text-xs text-boho-muted leading-relaxed">
+              Kışın <strong>kaloriferin kuruttuğu havayı (%25-30)</strong> ve <strong>tozu/alerjenleri</strong> iki ayrı cihaz yerine tek kasada çözmek ve statik elektriği kırarak toz yakalama performansını artırmak için "İklimlendirme İstasyonu (2-in-1)" olarak satılırlar.
+            </p>
+          </div>
+
+          <div class="bg-boho-sageLight/60 rounded-2xl p-5 border border-boho-sage/30 space-y-2.5">
+            <h3 class="font-bold text-base text-boho-brown">3. Önerilen Modeller & Mağaza Linkleri</h3>
+            <p class="text-xs text-boho-brown leading-relaxed">
+              Suya kireç/beyaz toz karıştıran ultrasonik sis makineleri yerine <strong>Saf HEPA 13</strong> veya <strong>Philips NanoCloud (Evaporatif 2-in-1)</strong> tercih edin:
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <a href="https://www.trendyol.com/sr?q=Philips%20Hava%20Temizleyici" target="_blank" rel="noopener noreferrer" class="shop-btn shop-trendyol">🟠 Philips HEPA (Trendyol)</a>
+              <a href="https://www.hepsiburada.com/ara?q=Philips%202%27si%201%20Arada%20Hava%20Temizleyici" target="_blank" rel="noopener noreferrer" class="shop-btn shop-hb">📦 Philips 2-in-1 (HB)</a>
+              <a href="https://www.amazon.com.tr/s?k=Levoit+Core+300S" target="_blank" rel="noopener noreferrer" class="shop-btn shop-amazon">🅰️ Levoit / Winix (Amazon)</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- ==================== MODAL: YENİ İHTİYAÇ EKLE ==================== -->
+  <div id="item-modal" class="fixed inset-0 z-50 hidden bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 border border-boho-border shadow-xl space-y-4">
+      <div class="flex items-center justify-between border-b border-boho-border pb-3">
+        <h3 class="font-serif text-lg font-bold text-boho-brown">Yeni İhtiyaç Kalemi Ekle</h3>
+        <button onclick="closeItemModal()" class="text-boho-muted hover:text-boho-brown">
+          <i class="ph-bold ph-x text-xl"></i>
+        </button>
+      </div>
+
+      <div class="space-y-3">
+        <div>
+          <label class="block text-xs font-semibold uppercase text-boho-muted mb-1">Kategori</label>
+          <select id="modal-category" class="w-full px-3.5 py-2.5 rounded-xl bg-boho-bg border border-boho-border text-sm focus:outline-none focus:border-boho-terracotta"></select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold uppercase text-boho-muted mb-1">Ürün / İhtiyaç Adı *</label>
+          <input type="text" id="modal-label" placeholder="Örn: Bebek Arabası Kışlık Eldiveni" class="w-full px-3.5 py-2.5 rounded-xl bg-boho-bg border border-boho-border text-sm focus:outline-none focus:border-boho-terracotta" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold uppercase text-boho-muted mb-1">Detay / Marka Notu / İpucu</label>
+          <textarea id="modal-note" rows="2" placeholder="Örn: Su geçirmez polar iç astarlı model..." class="w-full px-3.5 py-2.5 rounded-xl bg-boho-bg border border-boho-border text-sm focus:outline-none focus:border-boho-terracotta"></textarea>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold uppercase text-boho-muted mb-1">Tahmini Fiyat (₺)</label>
+            <input type="number" id="modal-price" placeholder="1000" min="0" class="w-full px-3.5 py-2.5 rounded-xl bg-boho-bg border border-boho-border text-sm focus:outline-none focus:border-boho-terracotta" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold uppercase text-boho-muted mb-1">Öncelik Durumu</label>
+            <select id="modal-priority" class="w-full px-3.5 py-2.5 rounded-xl bg-boho-bg border border-boho-border text-sm focus:outline-none focus:border-boho-terracotta">
+              <option value="urgent">İlk Ay Acil / Öncelikli</option>
+              <option value="normal">Standart (0-3 Ay)</option>
+              <option value="later">5-6. Ay Sonrası (Acelesi Yok)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-2 pt-3 border-t border-boho-border">
+        <button onclick="closeItemModal()" class="px-4 py-2 rounded-xl text-sm font-semibold text-boho-muted hover:bg-boho-sand transition-all">İptal</button>
+        <button onclick="saveCustomItem()" class="px-5 py-2 rounded-xl text-sm font-semibold bg-boho-terracotta text-white hover:bg-boho-terracottaDark transition-all">Listeye Ekle</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: VARSAYILANA SIFIRLA ==================== -->
+  <div id="reset-modal" class="fixed inset-0 z-50 hidden bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 border border-boho-border shadow-xl space-y-4">
+      <div class="flex items-center gap-3 text-red-600">
+        <i class="ph-fill ph-warning-circle text-3xl"></i>
+        <h3 class="font-serif text-lg font-bold text-boho-brown">Listeyi Varsayılana Sıfırla</h3>
+      </div>
+      <p class="text-sm text-boho-muted leading-relaxed">
+        Yaptığınız tüm işaretlemeler, fiyat güncellemeleri ve özel notlar sıfırlanarak ilk baştaki eksiksiz liste geri yüklenecektir. Onaylıyor musunuz?
+      </p>
+      <div class="flex items-center justify-end gap-2 pt-2">
+        <button onclick="closeResetModal()" class="px-4 py-2 rounded-xl text-sm font-semibold text-boho-muted hover:bg-boho-sand">Vazgeç</button>
+        <button onclick="confirmResetData()" class="px-4 py-2 rounded-xl text-sm font-semibold bg-red-600 text-white hover:bg-red-700">Evet, Sıfırla</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bildirim Toast -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden bg-boho-brown text-white px-4 py-3 rounded-xl shadow-lg text-sm font-medium flex items-center gap-2 transition-all">
+    <i class="ph-fill ph-check-circle text-boho-sage text-lg"></i>
+    <span id="toast-msg">Veritabanına kaydedildi</span>
+  </div>
+
+  <!-- ==================== JAVASCRIPT & YEREL VERİTABANI MANTIĞI ==================== -->
+  <script>
+    const STORAGE_KEY = 'oglumuz_hazirlik_db_v3';
+
+    const CATEGORIES = [
+      { id: 'uyku', name: '1. Uyku ve Oda Ekipmanları', icon: 'ph-moon-stars' },
+      { id: 'banyo', name: '2. Alt Değiştirme ve Banyo', icon: 'ph-bathtub' },
+      { id: 'beslenme', name: '3. Beslenme ve Anne Konforu', icon: 'ph-baby' },
+      { id: 'ulasim', name: '4. Ulaşım ve Dışarı Çıkış', icon: 'ph-baby-carriage' },
+      { id: 'tekstil', name: '5. Tekstil, Giyim ve Kış Hazırlığı', icon: 'ph-t-shirt' },
+      { id: 'saglik', name: '6. Sağlık, Güvenlik ve Gelişim', icon: 'ph-heartbeat' },
+      { id: 'hastane', name: '7. Doğum ve Anne Hastane Çantası', icon: 'ph-first-aid-kit' },
+      { id: 'ileri', name: '8. 5-6. Ay Sonrası (Acelesi Olmayanlar)', icon: 'ph-clock-countdown' }
+    ];
+
+    const DEFAULT_ITEMS = [
+      // 1. Uyku ve Oda Ekipmanları
+      { id: 'u1', category: 'uyku', label: 'Nefes alabilen beşik yatağı ve 2-3 adet sıvı geçirmez alez', note: 'Pamuklu, orta-sert sünger veya lateks yatak; terletmeyen pamuk yüzeyli alezler.', searchQuery: 'Bebek Beşik Yatağı ve Sıvı Geçirmez Alez', price: 4500, priority: 'urgent', checked: false, userNote: '' },
+      { id: 'u2', category: 'uyku', label: 'Anne yanı beşik (Park yatak veya sepet beşik)', note: 'Bebek odası hazır olsa bile ilk 4-6 ay gece emzirmeleri ve güvenlik için yatak odanızda hayat kurtarır.', searchQuery: 'Anne Yanı Beşik Park Yatak', price: 6000, priority: 'urgent', checked: false, userNote: '' },
+      { id: 'u3', category: 'uyku', label: 'Gece görüşlü bebek kamerası / telsizi ve beyaz gürültü (white noise) cihazı', note: 'Gece görüşlü kamera ve uykuya geçişi kolaylaştıran anne karnı sesi/beyaz gürültü cihazı.', searchQuery: 'Bebek Kamerası Telsizi Beyaz Gürültü Cihazı', price: 4200, priority: 'normal', checked: false, userNote: '' },
+      { id: 'u4', category: 'uyku', label: 'Dijital oda termometresi ve nem ölçer (Higrometre)', note: 'İdeal oda sıcaklığı (20-22°C) ve nem (%40-60) takibi için dijital gösterge (Xiaomi Mijia / ThermoPro).', searchQuery: 'Dijital Oda Termometresi Nem Ölçer Higrometre', price: 400, priority: 'urgent', checked: false, userNote: '' },
+      { id: 'u5', category: 'uyku', label: 'HEPA 13 filtreli hava temizleyici (Philips / Levoit / Winix)', note: 'Hava temizleyici odayı kurutmaz. Sadece HEPA 13 veya kireç tozu yaymayan Evaporatif 2-in-1 (Philips NanoCloud) seçilmeli.', searchQuery: 'Philips Hava Temizleyici HEPA', price: 8500, priority: 'normal', checked: false, userNote: '' },
+      { id: 'u6', category: 'uyku', label: 'Emzirme koltuğu (puf destekli) ve kırmızı/kehribar dokunmatik gece lambası', note: 'Gece beyaz ışık açmak melatonin hormonunu keser; kısılabilir sıcak kırmızı/sarı taşınabilir silikon lamba şarttır.', searchQuery: 'Emzirme Koltuğu ve Silikon Bebek Gece Lambası', price: 9000, priority: 'normal', checked: false, userNote: '' },
+
+      // 2. Alt Değiştirme ve Banyo
+      { id: 'b1', category: 'banyo', label: 'Silinebilir alt değiştirme minderi ve şifonyer üstü organizer kutu', note: 'Bez, pamuk, pişik kremi ve yedek zıbına tek elle ulaşmak için şifonyer üstü düzenleyici.', searchQuery: 'Silinebilir Bebek Alt Değiştirme Minderi', price: 1500, priority: 'urgent', checked: false, userNote: '' },
+      { id: 'b2', category: 'banyo', label: 'Koku hapseden bez çöp kovası ve tek kullanımlık alt açma örtüsü (1-2 paket)', note: '60x90 cm alt açma örtüleri (Sleepy / Baby Turco) hem dışarıda hem şifonyer minderini korumak için çok pratiktir.', searchQuery: 'Bebek Bez Çöp Kovası ve Alt Açma Örtüsü', price: 1350, priority: 'urgent', checked: false, userNote: '' },
+      { id: 'b3', category: 'banyo', label: 'Katlanabilir bebek küveti, küvet filesi, maşrapa ve dijital su termometresi', note: 'Yenidoğan banyo suyunun ideal sıcaklığını (37°C) stres olmadan ölçmek için yüzen derece.', searchQuery: 'Katlanabilir Bebek Küveti Seti ve Su Termometresi', price: 2100, priority: 'urgent', checked: false, userNote: '' },
+      { id: 'b4', category: 'banyo', label: 'Pişik kremi, temiz içerikli şampuan, alt temizleme pamuğu ve 1 numara bez (1-2 paket)', note: 'Alerji ihtimaline karşı başlangıçta dev bez stoğu yapmayın; 1-2 paket alıp deneyin (Mustela / Sudocrem / Prima).', searchQuery: 'Yenidoğan Bebek Şampuanı Pişik Kremi Alt Temizleme Pamuğu', price: 1800, priority: 'urgent', checked: false, userNote: '' },
+      { id: 'b5', category: 'banyo', label: 'Hipoalerjenik bebek çamaşır deterjanı ve bebek odası kirli sepeti', note: 'Doğumdan önce alınan tüm tekstilleri 30-40 derecede yıkayıp çift durulama yapmak için.', searchQuery: 'Bebek Çamaşır Deterjanı Hipoalerjenik', price: 750, priority: 'urgent', checked: false, userNote: '' },
+
+      // 3. Beslenme ve Anne Konforu
+      { id: 'bs1', category: 'beslenme', label: 'Çiftli elektrikli göğüs pompası ve süt saklama poşetleri', note: 'Süt kanallarını uyarmak ve sağım süresini yarıya indirmek için çiftli pompa (Lansinoh / Philips Avent).', searchQuery: 'Çiftli Elektrikli Göğüs Pompası Süt Saklama Poşeti', price: 4600, priority: 'urgent', checked: false, userNote: '' },
+      { id: 'bs2', category: 'beslenme', label: 'Haakaa tipi silikon vakumlu süt toplayıcı ve ergonomik emzirme yastığı', note: 'Bir memeden emzirirken diğer memeden akan sütü elektrik olmadan sessizce toplar.', searchQuery: 'Silikon Vakumlu Süt Toplayıcı Emzirme Yastığı', price: 1450, priority: 'urgent', checked: false, userNote: '' },
+      { id: 'bs3', category: 'beslenme', label: '2 adet cam biberon (0+ yenidoğan antikolik uçlu) ve biberon fırçası', note: 'Meme reddi yapmayan doğal anne göğsü formunda yavaş akışlı uçlar (Philips Avent Natural Response).', searchQuery: 'Philips Avent Natural Cam Biberon Yenidoğan', price: 1250, priority: 'urgent', checked: false, userNote: '' },
+      { id: 'bs4', category: 'beslenme', label: 'Kurutmalı buharlı biberon sterilizatörü', note: 'Sadece buhar verenler ıslak bırakır; kurutma özellikli modeller (Philips Avent Premium / Baby Brezza) 40 dk içinde kupkuru çıkarır.', searchQuery: 'Kurutmalı Buharlı Biberon Sterilizatörü', price: 4800, priority: 'normal', checked: false, userNote: '' },
+      { id: 'bs5', category: 'beslenme', label: 'Gümüş göğüs kapakları (925/999 ayar), saf lanolin krem ve göğüs pedleri', note: 'İlk haftalarda göğüs ucu hassasiyeti ve tahrişini önlemek için en etkili koruyucu ikili.', searchQuery: 'Gümüş Göğüs Kapağı Lanolin Göğüs Ucu Kremi', price: 1500, priority: 'urgent', checked: false, userNote: '' },
+
+      // 4. Ulaşım ve Dışarı Çıkış
+      { id: 'ul1', category: 'ulasim', label: 'ADAC testli ana kucağı / oto koltuğu (ISOFIX tabanlı)', note: 'Hastaneden çıkışta zorunluluktur. 0-13 kg puset veya 0-18 kg 360° dönen model (Cybex / Britax Römer / Maxi-Cosi / BeSafe).', searchQuery: 'Isofixli Bebek Oto Koltuğu ADAC', price: 15500, priority: 'urgent', checked: false, userNote: '' },
+      { id: 'ul2', category: 'ulasim', label: 'Araç arka koltuk bebek gözlem aynası', note: 'Ters bağlanan oto koltuğundaki bebeğin yüzünü dikiz aynasından güvenle görmek için kırılmaz geniş açılı ayna.', searchQuery: 'Araç Arka Koltuk Bebek Gözlem Aynası', price: 550, priority: 'urgent', checked: false, userNote: '' },
+      { id: 'ul3', category: 'ulasim', label: 'Bebek arabası (Tek elle kapanabilen kabin veya travel sistem)', note: 'Bagaja rahat sığan, tam yatabilen ve hafif şasili bebek arabası.', searchQuery: 'Bebek Arabası Travel Sistem Kabin Boy', price: 19500, priority: 'urgent', checked: false, userNote: '' },
+      { id: 'ul4', category: 'ulasim', label: 'Ergonomik kanguru / yenidoğan uyumlu sling ve bebek bakım sırt çantası', note: 'Kalça gelişimine uygun M-oturuş destekli kanguru ve termal biberon gözlü bakım çantası.', searchQuery: 'Ergonomik Bebek Kanguru ve Bebek Bakım Çantası', price: 3900, priority: 'urgent', checked: false, userNote: '' },
+
+      // 5. Tekstil, Giyim ve Kış Hazırlığı
+      { id: 't1', category: 'tekstil', label: '8-10 adet çıtçıtlı kruvaze zıbın ve çift yönlü fermuarlı tulum (0-3 & 3-6 Ay)', note: 'Baştan geçmeli yerine kruvaze çıtçıtlılar ve gece alt açmayı kolaylaştıran çift fermuarlı 56-62 cm tulumlar.', searchQuery: 'Yenidoğan Kruvaze Zıbın Çift Fermuarlı Bebek Tulumu', price: 4000, priority: 'urgent', checked: false, userNote: '' },
+      { id: 't2', category: 'tekstil', label: '4-5 adet müslin örtü, 10-12 ağız mendili ve 2 adet pamuklu battaniye', note: 'Reflü/salya için bol ağız mendili ve nefes alan çok amaçlı bambu/pamuk müslin örtüler.', searchQuery: 'Organik Pamuk Müslin Örtü Ağız Mendili Seti', price: 2200, priority: 'urgent', checked: false, userNote: '' },
+      { id: 't3', category: 'tekstil', label: 'TOG değerli uyku tulumu (1.0 veya 2.5 TOG)', note: 'Güvenli uyku için yatakta gevşek battaniye yerine oda sıcaklığına uygun TOG değerli tulum.', searchQuery: 'Bebek Uyku Tulumu 1.0 TOG 2.5 TOG', price: 1600, priority: 'normal', checked: false, userNote: '' },
+      { id: 't4', category: 'tekstil', label: 'Kışlık astronot tulum / Footmuff ve bebek arabası yağmurluk & rüzgarlığı', note: 'Soğuk havalarda yürüyüş ve hastane çıkışı için (Oto koltuğuna bağlarken çıkarılmalıdır).', searchQuery: 'Bebek Astronot Tulum Bebek Arabası Yağmurluğu', price: 2300, priority: 'urgent', checked: false, userNote: '' },
+      { id: 't5', category: 'tekstil', label: '2-3 adet başlıklı yenidoğan banyo havlusu (100x100 cm), şapka ve çorap seti', note: 'Bebeği küvetten çıkarır çıkarmaz başını korumak için üçgen kapüşonlu yumuşak havlu.', searchQuery: 'Yenidoğan Başlıklı Bebek Banyo Havlusu 100x100', price: 1400, priority: 'urgent', checked: false, userNote: '' },
+
+      // 6. Sağlık, Güvenlik ve Gelişim
+      { id: 's1', category: 'saglik', label: 'Ev tipi yaylanan ana kucağı / Bouncer (Joie Dreamer veya baby plus Cool)', note: 'Joie Dreamer (3.999 TL - müzik/titreşimli, incecik katlanır) veya baby plus Cool (1.599 TL).', searchQuery: 'Joie Dreamer Ana Kucağı', price: 3999, priority: 'urgent', checked: false, userNote: 'Alternatif: baby plus Cool (1.599 TL) / Chicco Rhythm N Sound (5.599 TL)' },
+      { id: 's2', category: 'saglik', label: 'Oyun halısı (Tummy Time matı) ve siyah-beyaz kontrast zeka kartları', note: '1. aydan itibaren boyun/sırt kaslarını güçlendiren karın üstü egzersizleri için.', searchQuery: 'Bebek Oyun Halısı Tummy Time Siyah Beyaz Kartlar', price: 1750, priority: 'normal', checked: false, userNote: '' },
+      { id: 's3', category: 'saglik', label: 'Dijital ateş ölçer (kulaktan/alından), serum fizyolojik ve burun aspiratörü', note: 'Braun ThermoScan ateş ölçer, Otribebe burun aspiratörü ve tek kullanımlık flakonlar ilk günden evde olmalı.', searchQuery: 'Braun Ateş Ölçer Otribebe Burun Aspiratörü', price: 2600, priority: 'urgent', checked: false, userNote: '' },
+      { id: 's4', category: 'saglik', label: 'Pilli bebek tırnak törpüsü / makası ve keçi kılı yumuşak saç fırçası', note: 'İnce tırnakları kanatmadan kısaltmak ve konak oluşumunu önlemek için doğal keçi kılı fırça.', searchQuery: 'Pilli Bebek Tırnak Törpüsü Keçi Kılı Bebek Fırçası', price: 950, priority: 'urgent', checked: false, userNote: '' },
+      { id: 's5', category: 'saglik', label: 'L-tipi mobilya sabitleme aparatları (Gardırop ve şifonyer için)', note: 'Deprem ve devrilme güvenliği için dolap ve şifonyeri duvara sabitleme kiti.', searchQuery: 'Mobilya Duvara Sabitleme Aparatı Deprem Kiti', price: 300, priority: 'urgent', checked: false, userNote: '' },
+      { id: 's6', category: 'saglik', label: '2 adet yenidoğan emzik (0-2 ay) ve kiraz çekirdeği gaz kemeri', note: 'Philips Avent Ultra Start / Bibs emzik ve ilk 3 ay kolik/gaz sancısını rahatlatan ısıtılabilir kemer.', searchQuery: 'Philips Avent Yenidoğan Emzik Kiraz Çekirdeği Gaz Kemeri', price: 1100, priority: 'urgent', checked: false, userNote: '' },
+
+      // 7. Doğum ve Anne Hastane Çantası
+      { id: 'h1', category: 'hastane', label: '2-3 takım önden düğmeli lohusa pijama takımı ve sabahlık', note: 'Kolay emzirme ve hastane viziteleri için pamuklu/modal takımlar.', searchQuery: 'Önden Düğmeli Lohusa Pijama Sabahlık Takımı', price: 2800, priority: 'urgent', checked: false, userNote: '' },
+      { id: 'h2', category: 'hastane', label: '3-4 adet emzirme sütyeni ve pamuklu emzirme atleti', note: 'Balensiz, tek elle klipsi açılabilen yumuşak pamuklu modeller.', searchQuery: 'Pamuklu Emzirme Sütyeni Emzirme Atleti', price: 1650, priority: 'urgent', checked: false, userNote: '' },
+      { id: 'h3', category: 'hastane', label: 'Tek kullanımlık file / yüksek bel lohusa külodu, lohusa pedi ve kaymaz terlik', note: 'Doğum sonrası ilk günler için en önemli hijyen ve konfor kalemleri.', searchQuery: 'Lohusa Külodu Lohusa Pedi Lohusa Terliği', price: 1100, priority: 'urgent', checked: false, userNote: '' },
+
+      // 8. 5-6. Ay Sonrası
+      { id: 'il1', category: 'ileri', label: 'Mama sandalyesi ve silikon ek gıda seti (tabak, kaşık, alıştırma bardağı)', note: 'Bebek 5.5 - 6 aylık olup destekli dik oturmaya başladığında alınmalıdır.', searchQuery: 'Bebek Mama Sandalyesi Silikon Ek Gıda Seti', price: 4500, priority: 'later', checked: false, userNote: '6. aya kadar acelesi yok' },
+      { id: 'il2', category: 'ileri', label: 'Priz kapakları, köşe koruyucular ve çekmece güvenlik kilitleri', note: 'Bebek 6-7. ayda emeklemeye başladığında takılır.', searchQuery: 'Bebek Güvenlik Seti Priz Kapağı Çekmece Kilidi', price: 650, priority: 'later', checked: false, userNote: 'Emekleme döneminde alınacak' }
+    ];
+
+    let items = [];
+    let activeCategoryFilter = 'all';
+    let activeStatusFilter = 'all';
+
+    // Veritabanını Yükle
+    function loadDatabase() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            items = parsed;
+            return;
+          }
+        }
+      } catch (e) {
+        console.warn('LocalStorage okuma hatası:', e);
+      }
+      items = JSON.parse(JSON.stringify(DEFAULT_ITEMS));
+      saveDatabase(false);
+    }
+
+    // Veritabanına Kaydet
+    function saveDatabase(showNotification = true) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+        const timeStr = new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        const statusText = document.getElementById('db-status-text');
+        if (statusText) {
+          statusText.textContent = `Veritabanı Kayıt Durumu: Kaydedildi (${timeStr})`;
+        }
+        if (showNotification) {
+          showToast('Değişiklikler yerel veritabanına kaydedildi');
+        }
+      } catch (e) {
+        console.error('Veritabanı kayıt hatası:', e);
+      }
+      updateDashboardStats();
+      renderCategoryPills();
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-msg');
+      if (!toast || !toastMsg) return;
+      toastMsg.textContent = msg;
+      toast.classList.remove('hidden');
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 2200);
+    }
+
+    // Üst Özet İstatistiklerini Güncelle
+    function updateDashboardStats() {
+      const total = items.length;
+      const completed = items.filter(i => i.checked).length;
+      const percent = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+      const urgentItems = items.filter(i => i.priority === 'urgent');
+      const urgentDone = urgentItems.filter(i => i.checked).length;
+
+      const totalBudget = items.reduce((sum, i) => sum + (Number(i.price) || 0), 0);
+      const spentBudget = items.filter(i => i.checked).reduce((sum, i) => sum + (Number(i.price) || 0), 0);
+      const remainingBudget = totalBudget - spentBudget;
+
+      document.getElementById('stat-completed-count').textContent = completed;
+      document.getElementById('stat-total-count').textContent = total;
+      document.getElementById('stat-percent-badge').textContent = `%${percent}`;
+      document.getElementById('stat-progress-bar').style.width = `${percent}%`;
+
+      document.getElementById('stat-urgent-done').textContent = urgentDone;
+      document.getElementById('stat-urgent-total').textContent = urgentItems.length;
+
+      document.getElementById('stat-estimated-budget').textContent = totalBudget.toLocaleString('tr-TR') + ' ₺';
+      document.getElementById('stat-spent-budget').textContent = spentBudget.toLocaleString('tr-TR') + ' ₺';
+      document.getElementById('stat-remaining-budget').textContent = remainingBudget.toLocaleString('tr-TR') + ' ₺';
+    }
+
+    // Kategori Filtre Butonları
+    function renderCategoryPills() {
+      const container = document.getElementById('category-pills-container');
+      if (!container) return;
+
+      const allActive = activeCategoryFilter === 'all';
+      let html = `
+        <button onclick="setCategoryFilter('all')" class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${allActive ? 'bg-boho-terracotta text-white shadow-xs' : 'bg-boho-bg text-boho-brown hover:bg-boho-sand border border-boho-border'}">
+          Tüm Kategoriler (${items.filter(i => i.checked).length}/${items.length})
+        </button>
+      `;
+
+      CATEGORIES.forEach(cat => {
+        const catItems = items.filter(i => i.category === cat.id);
+        const catDone = catItems.filter(i => i.checked).length;
+        const isActive = activeCategoryFilter === cat.id;
+        html += `
+          <button onclick="setCategoryFilter('${cat.id}')" class="px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all flex items-center gap-1.5 ${isActive ? 'bg-boho-terracotta text-white shadow-xs' : 'bg-boho-bg text-boho-brown hover:bg-boho-sand border border-boho-border'}">
+            <i class="ph-bold ${cat.icon}"></i>
+            <span>${cat.name.replace(/^\d+\.\s*/, '')}</span>
+            <span class="opacity-80">(${catDone}/${catItems.length})</span>
+          </button>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function setCategoryFilter(catId) {
+      activeCategoryFilter = catId;
+      renderCategoryPills();
+      renderChecklist();
+    }
+
+    function setStatusFilter(status) {
+      activeStatusFilter = status;
+      const statuses = ['all', 'pending', 'completed', 'urgent', 'later'];
+      statuses.forEach(s => {
+        const btn = document.getElementById(`filter-status-${s}`);
+        if (!btn) return;
+        if (s === status) {
+          btn.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold transition-all bg-boho-brown text-white flex items-center gap-1';
+        } else {
+          btn.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-boho-muted hover:text-boho-brown flex items-center gap-1';
+        }
+      });
+      renderChecklist();
+    }
+
+    // Doğrudan Alışveriş Linklerini Üret
+    function getStoreLinksHTML(item) {
+      const q = encodeURIComponent(item.searchQuery || item.label);
+      return `
+        <div class="flex flex-wrap items-center gap-1.5 pt-2 no-print">
+          <span class="text-[11px] font-semibold text-boho-muted mr-1">Mağazada İncele:</span>
+          <a href="https://www.e-bebek.com/search?text=${q}" target="_blank" rel="noopener noreferrer" class="shop-btn shop-ebebek">
+            🛒 Ebebek <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+          <a href="https://www.trendyol.com/sr?q=${q}" target="_blank" rel="noopener noreferrer" class="shop-btn shop-trendyol">
+            🟠 Trendyol <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+          <a href="https://www.hepsiburada.com/ara?q=${q}" target="_blank" rel="noopener noreferrer" class="shop-btn shop-hb">
+            📦 Hepsiburada <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+          <a href="https://www.amazon.com.tr/s?k=${q}" target="_blank" rel="noopener noreferrer" class="shop-btn shop-amazon">
+            🅰️ Amazon TR <i class="ph-bold ph-arrow-square-out"></i>
+          </a>
+        </div>
+      `;
+    }
+
+    // Öncelik Rozeti
+    function getPriorityBadgeHTML(priority) {
+      if (priority === 'urgent') {
+        return `<span class="inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded-md bg-boho-amber/20 text-boho-terracottaDark border border-boho-amber/40"><i class="ph-fill ph-star text-boho-amber"></i> İlk Ay Acil</span>`;
+      }
+      if (priority === 'later') {
+        return `<span class="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-md bg-stone-100 text-stone-600 border border-stone-300"><i class="ph-bold ph-clock"></i> 5-6. Ay Sonrası</span>`;
+      }
+      return `<span class="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-md bg-boho-sand text-boho-muted">0-3 Ay Standart</span>`;
+    }
+
+    // İhtiyaç Listesini Ekrana Çiz
+    function renderChecklist() {
+      const container = document.getElementById('checklist-container');
+      const searchQuery = (document.getElementById('search-input')?.value || '').toLowerCase().trim();
+
+      const catsToRender = activeCategoryFilter === 'all'
+        ? CATEGORIES
+        : CATEGORIES.filter(c => c.id === activeCategoryFilter);
+
+      let html = '';
+
+      catsToRender.forEach(cat => {
+        const filteredItems = items.filter(item => {
+          if (item.category !== cat.id) return false;
+          if (activeStatusFilter === 'pending' && item.checked) return false;
+          if (activeStatusFilter === 'completed' && !item.checked) return false;
+          if (activeStatusFilter === 'urgent' && item.priority !== 'urgent') return false;
+          if (activeStatusFilter === 'later' && item.priority !== 'later') return false;
+
+          if (searchQuery) {
+            const hay = `${item.label} ${item.note} ${item.userNote || ''} ${item.searchQuery || ''}`.toLowerCase();
+            if (!hay.includes(searchQuery)) return false;
+          }
+          return true;
+        });
+
+        if (filteredItems.length === 0) return;
+
+        const doneCount = filteredItems.filter(i => i.checked).length;
+        const catTotalBudget = filteredItems.reduce((acc, i) => acc + (Number(i.price) || 0), 0);
+
+        html += `
+          <section class="bg-white rounded-2xl border border-boho-border shadow-sm overflow-hidden">
+            <div class="bg-boho-sand/60 px-5 py-3.5 border-b border-boho-border flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-white border border-boho-border flex items-center justify-center text-boho-terracotta">
+                  <i class="ph-bold ${cat.icon} text-lg"></i>
+                </div>
+                <h2 class="font-serif text-base sm:text-lg font-bold text-boho-brown">${cat.name}</h2>
+              </div>
+              <div class="flex items-center gap-3 text-xs font-semibold">
+                <span class="text-boho-muted">Kategori Toplamı: <strong class="text-boho-brown">${catTotalBudget.toLocaleString('tr-TR')} ₺</strong></span>
+                <span class="px-2.5 py-1 rounded-full bg-white border border-boho-border text-boho-brown">${doneCount} / ${filteredItems.length} Alındı</span>
+              </div>
+            </div>
+
+            <div class="divide-y divide-boho-border">
+        `;
+
+        filteredItems.forEach(item => {
+          const safeUserNote = (item.userNote || '').replace(/"/g, '&quot;');
+          html += `
+            <div class="p-4 sm:p-5 transition-all flex flex-col lg:flex-row lg:items-center justify-between gap-4 ${item.checked ? 'checked-card' : 'hover:bg-boho-bg/50'}">
+              
+              <!-- Sol: Checkbox, Başlık, Açıklama ve Mağaza Linkleri -->
+              <div class="flex items-start gap-3.5 flex-1">
+                <input 
+                  type="checkbox" 
+                  ${item.checked ? 'checked' : ''} 
+                  onchange="toggleItemCheck('${item.id}')"
+                  class="mt-1 w-5 h-5 rounded-md border-boho-border text-boho-sage focus:ring-boho-sage cursor-pointer shrink-0 accent-[#6B8E78]"
+                />
+                <div class="space-y-1 flex-1">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span onclick="toggleItemCheck('${item.id}')" class="font-bold text-sm sm:text-base text-boho-brown item-title cursor-pointer hover:text-boho-terracotta transition-colors">
+                      ${item.label}
+                    </span>
+                    ${getPriorityBadgeHTML(item.priority)}
+                  </div>
+                  <p class="text-xs sm:text-sm text-boho-muted leading-relaxed">${item.note}</p>
+                  ${getStoreLinksHTML(item)}
+                </div>
+              </div>
+
+              <!-- Sağ: Özel Not, Fiyat Kutusu ve Sil Butonu -->
+              <div class="flex flex-wrap sm:flex-nowrap items-center gap-2 lg:w-[410px] justify-end shrink-0 pt-2 lg:pt-0 border-t lg:border-t-0 border-boho-border/60">
+                <div class="relative flex-1 sm:w-52">
+                  <i class="ph-bold ph-note-pencil absolute left-2.5 top-1/2 -translate-y-1/2 text-boho-muted text-xs"></i>
+                  <input 
+                    type="text" 
+                    value="${safeUserNote}"
+                    onchange="updateItemUserNote('${item.id}', this.value)"
+                    placeholder="Aldığınız marka / mağaza notu..."
+                    class="w-full pl-7 pr-2.5 py-2 rounded-xl bg-white border border-boho-border text-xs text-boho-brown focus:outline-none focus:border-boho-terracotta"
+                  />
+                </div>
+
+                <div class="relative w-32">
+                  <input 
+                    type="number" 
+                    min="0"
+                    step="50"
+                    value="${item.price}"
+                    onchange="updateItemPrice('${item.id}', this.value)"
+                    class="w-full pl-3 pr-7 py-2 rounded-xl bg-white border border-boho-border text-xs font-bold text-right text-boho-brown focus:outline-none focus:border-boho-terracotta"
+                  />
+                  <span class="absolute right-2.5 top-1/2 -translate-y-1/2 text-xs font-bold text-boho-muted">₺</span>
+                </div>
+
+                <button onclick="removeItem('${item.id}')" class="p-2 rounded-xl text-boho-muted hover:text-red-600 hover:bg-red-50 transition-all no-print" title="Listeden Kaldır">
+                  <i class="ph-bold ph-trash text-base"></i>
+                </button>
+              </div>
+
+            </div>
+          `;
+        });
+
+        html += `</div></section>`;
+      });
+
+      if (!html) {
+        html = `
+          <div class="bg-white rounded-2xl p-10 text-center border border-boho-border space-y-2">
+            <i class="ph-duotone ph-magnifying-glass text-4xl text-boho-muted"></i>
+            <p class="font-bold text-boho-brown">Arama veya filtre kriterine uygun ürün bulunamadı.</p>
+            <button onclick="resetFilters()" class="text-xs font-semibold text-boho-terracotta underline">Filtreleri Temizle</button>
+          </div>
+        `;
+      }
+
+      container.innerHTML = html;
+    }
+
+    function resetFilters() {
+      activeCategoryFilter = 'all';
+      activeStatusFilter = 'all';
+      const searchInput = document.getElementById('search-input');
+      if (searchInput) searchInput.value = '';
+      setStatusFilter('all');
+      renderCategoryPills();
+      renderChecklist();
+    }
+
+    // İşaretleme, Fiyat ve Not Güncelleme İşlevleri
+    function toggleItemCheck(id) {
+      const target = items.find(i => i.id === id);
+      if (!target) return;
+      target.checked = !target.checked;
+      saveDatabase(true);
+      renderChecklist();
+    }
+
+    function updateItemPrice(id, newPrice) {
+      const target = items.find(i => i.id === id);
+      if (!target) return;
+      target.price = Math.max(0, Number(newPrice) || 0);
+      saveDatabase(true);
+      renderChecklist();
+    }
+
+    function updateItemUserNote(id, newNote) {
+      const target = items.find(i => i.id === id);
+      if (!target) return;
+      target.userNote = newNote.trim();
+      saveDatabase(true);
+    }
+
+    function removeItem(id) {
+      items = items.filter(i => i.id !== id);
+      saveDatabase(true);
+      renderChecklist();
+    }
+
+    // Ana Sekme Değiştirici (Checklist <-> Karşılaştırma Rehberi)
+    function switchMainTab(tab) {
+      const viewChecklist = document.getElementById('view-checklist');
+      const viewComparisons = document.getElementById('view-comparisons');
+      const btnChecklist = document.getElementById('tab-btn-checklist');
+      const btnComparisons = document.getElementById('tab-btn-comparisons');
+
+      if (tab === 'checklist') {
+        viewChecklist.classList.remove('hidden');
+        viewComparisons.classList.add('hidden');
+        btnChecklist.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 bg-boho-terracotta text-white shadow-sm';
+        btnComparisons.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 bg-white text-boho-brown border border-boho-border hover:bg-boho-sand';
+      } else {
+        viewChecklist.classList.add('hidden');
+        viewComparisons.classList.remove('hidden');
+        btnComparisons.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 bg-boho-terracotta text-white shadow-sm';
+        btnChecklist.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 bg-white text-boho-brown border border-boho-border hover:bg-boho-sand';
+      }
+    }
+
+    // Yeni Ürün Ekleme Modalı
+    function populateModalCategories() {
+      const sel = document.getElementById('modal-category');
+      if (!sel) return;
+      sel.innerHTML = CATEGORIES.map(c => `<option value="${c.id}">${c.name}</option>`).join('');
+    }
+
+    function openAddItemModal() {
+      populateModalCategories();
+      document.getElementById('modal-label').value = '';
+      document.getElementById('modal-note').value = '';
+      document.getElementById('modal-price').value = '';
+      document.getElementById('modal-priority').value = 'urgent';
+      document.getElementById('item-modal').classList.remove('hidden');
+    }
+
+    function closeItemModal() {
+      document.getElementById('item-modal').classList.add('hidden');
+    }
+
+    function saveCustomItem() {
+      const category = document.getElementById('modal-category').value;
+      const label = document.getElementById('modal-label').value.trim();
+      const note = document.getElementById('modal-note').value.trim();
+      const price = Math.max(0, Number(document.getElementById('modal-price').value) || 0);
+      const priority = document.getElementById('modal-priority').value;
+
+      if (!label) {
+        showToast('Lütfen ürün adını yazın');
+        return;
+      }
+
+      items.unshift({
+        id: 'custom_' + Date.now(),
+        category,
+        label,
+        note: note || 'Özel eklenen ihtiyaç kalemi.',
+        searchQuery: label,
+        price,
+        priority,
+        checked: false,
+        userNote: ''
+      });
+
+      saveDatabase(true);
+      renderChecklist();
+      closeItemModal();
+    }
+
+    // Sıfırlama Modalı
+    function openResetModal() {
+      document.getElementById('reset-modal').classList.remove('hidden');
+    }
+
+    function closeResetModal() {
+      document.getElementById('reset-modal').classList.add('hidden');
+    }
+
+    function confirmResetData() {
+      localStorage.removeItem(STORAGE_KEY);
+      items = JSON.parse(JSON.stringify(DEFAULT_ITEMS));
+      saveDatabase(true);
+      renderChecklist();
+      closeResetModal();
+    }
+
+    // JSON Yedek İndir / Yükle
+    function exportData() {
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(items, null, 2));
+      const a = document.createElement('a');
+      a.setAttribute('href', dataStr);
+      a.setAttribute('download', 'oglumuz_ihtiyac_listesi_yedek.json');
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      showToast('Yedek dosyası (.json) indirildi');
+    }
+
+    function importData(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const imported = JSON.parse(e.target.result);
+          if (Array.isArray(imported) && imported.length > 0) {
+            items = imported;
+            saveDatabase(true);
+            renderChecklist();
+            showToast('Yedek başarıyla yüklendi!');
+          }
+        } catch (err) {
+          showToast('Geçersiz JSON yedek dosyası');
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    // Uygulamayı Başlat
+    window.addEventListener('DOMContentLoaded', () => {
+      loadDatabase();
+      renderCategoryPills();
+      renderChecklist();
+      updateDashboardStats();
+    });
+  </script>
+</body>
+</html>
